@@ -224,7 +224,7 @@ span {
     top: 28%;
     left: 20%;
     z-index: 999;
-    line-height: 300px;
+    line-height: 200px;
     visibility: hidden;
     box-shadow: 5px 5px 5px #a7abaa;
     text-align: center;
@@ -246,6 +246,7 @@ span {
     -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
 /* Add animation (fade in the popup) */
