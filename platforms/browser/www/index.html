@@ -82,11 +82,17 @@
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Find Events Near You!</p>
-            <button onclick="document.getElementById('startpage').style.display = 'block'; document.getElementById('homepage').style.display = 'none';">Get Started</button>
+            <button onclick="app.showStartPage()">Get Started</button>
         </div>
     </div>
     <div id="startpage">
-        <div id='map' style='background-color: black;width: 300px; height: 300px;'></div>
+        <div id="event-title">Find an Event!</div>
+        <div id='map' style='background-color: black;'></div>
+        <div id="menu-bar">
+            <span>Find Events</span>
+            <span>My Events</span>
+            <span>Leaderboard</span>
+        </div>
     </div>
 
 <!--     <div id="homepage">Home Page<button onclick="document.getElementById('startpage').style.display = 'block'; document.getElementById('homepage').style.display = 'none';">Next Page</button>
