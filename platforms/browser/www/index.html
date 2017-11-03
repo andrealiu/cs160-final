@@ -77,15 +77,26 @@
 </head>
 
 <body>
-    <div id="homepage" class="app">
-        <h1>Birds Eye</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Find Events Near You!</p>
-            <button onclick="app.showStartPage()">Get Started</button>
+    <div id="homepage">
+    <h1>Birds Eye</h1>
+    <div class="app">
+        <div>
+            <p class="intro">
+                Expand your perspective by finding events near you.
+            </p>
+            <p class="intro">
+                Get more points for attending events you might usually not.
+            </p>
         </div>
+        <div id="deviceready" class="blink">
+<!--             <p class="event listening">Connecting to Device</p>
+            <p class="event received">Find Events Near You!</p> -->
+        </div>
+        <div id="get-started" onclick="app.showStartPage()">Get Started</div>
+    </div>
     </div>
     <div id="startpage">
+        <div id="instructions" class="popup">Filler</div>
         <div id="event-title">Find an Event!</div>
         <div id='map' style='background-color: black;'></div>
         <div id="menu-bar">
