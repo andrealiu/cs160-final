@@ -89,9 +89,9 @@
         <div id="event-title">Find an Event!</div>
         <div id='map' style='background-color: black;'></div>
         <div id="menu-bar">
-            <span>Find Events</span>
-            <span>My Events</span>
-            <span>Leaderboard</span>
+            <span id="map-tab" class="active" onclick="app.changeActiveTab('map-tab')">Find Events</span>
+            <span id="events-tab" onclick="app.changeActiveTab('events-tab')">My Events</span>
+            <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
         </div>
     </div>
 

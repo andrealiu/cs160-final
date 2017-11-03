@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var tabs = ["map-tab", "events-tab", "leaderboard"]
 var app = {
     // Application Constructor
     initialize: function() {
@@ -70,5 +71,16 @@ var app = {
         }));
         console.log("hello");
         map.resize()
+    },
+    changeActiveTab: function(id) {
+        document.getElementById(id).classList.add("active")
+        console.log("ACTIVE:", id);
+        for (var i = 0; i < tabs.length; i++) {
+            if (! (id==tabs[i])) {
+                console.log("LOOP:", tabs[i])
+                document.getElementById(tabs[i]).classList.remove("active")
+            }
+        }
+
     }
 };
