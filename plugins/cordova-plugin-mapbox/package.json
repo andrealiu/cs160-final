@@ -1,0 +1,59 @@
+{
+  "version": "1.2.3",
+  "name": "cordova-plugin-mapbox",
+  "cordova_name": "Mapbox",
+  "description": "Need native maps? Look no further!",
+  "license": "MIT",
+  "repo": "https://github.com/Telerik-Verified-Plugins/Mapbox.git",
+  "issue": "https://github.com/Telerik-Verified-Plugins/Mapbox/issues",
+  "keywords": [
+    "Mapbox",
+    "Maps",
+    "Mapping",
+    "Native maps",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "gitHead": "4fef0b8c91c8bf03995f4f1e72b76970f84454c7",
+  "_id": "cordova-plugin-mapbox@1.2.3",
+  "scripts": {},
+  "_shasum": "6ea09c8c44556932490b08b7d9193243a33c156e",
+  "_from": "cordova-plugin-mapbox@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.6.0",
+  "_npmUser": {
+    "name": "cuss",
+    "email": "josemoreiravarzim@gmail.com"
+  },
+  "dist": {
+    "shasum": "6ea09c8c44556932490b08b7d9193243a33c156e",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-mapbox/-/cordova-plugin-mapbox-1.2.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "cuss",
+      "email": "josemoreiravarzim@gmail.com"
+    },
+    {
+      "name": "eddyverbruggen",
+      "email": "eddyverbruggen@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-mapbox-1.2.3.tgz_1483114806627_0.6526071839034557"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-mapbox/-/cordova-plugin-mapbox-1.2.3.tgz"
+}
