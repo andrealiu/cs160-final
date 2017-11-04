@@ -49,12 +49,11 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    wait: function(ms){
-       var start = new Date().getTime();
-       var end = start;
-       while(end < start + ms) {
-         end = new Date().getTime();
-      }
+    hidePopup: function(id){
+       var popup = document.getElementById(id);
+       popup.classList.remove("show");
+       popup.classList.add("hide");
+
     },
     showStartPage: function() {
         document.getElementById('startpage').style.display = 'block'; 

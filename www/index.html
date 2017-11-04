@@ -97,8 +97,22 @@
     </div>
     <div id="startpage">
         <div id="instructions" class="popup">
-            On the map you'll find various events near your location!
-            Events are color coded accorded to political leaning (left, center, right). Get more points for attending events from a variety of perspectives, and move up the leaderboard!</div>
+            <p class="popup-text">
+            On the map you'll find various <strong>events</strong> near your location!
+            </p>
+            <p class="popup-text">
+                Events are color coded accorded to <strong>political leaning</strong> (left, center, right).
+            </p>
+            <p class="popup-text">
+                Get <strong>more points</strong> for attending events from a variety of perspectives. Move up the leaderboard + have the chance to receive discounts from local sponsors!
+            </p>
+            <p class="popup-text">
+                Tap on an event to go to the RSVP page. To cancel or confirm attendance, check the <strong>"My Events"</strong> tab.
+            </p>
+            <div class="popup-exit" onclick="app.hidePopup('instructions')">OK</div>
+        </div>
+        <div id="points-label">My Points</div>
+        <div id="points">0</div>
         <div id="event-title">Find an Event!</div>
         <div id='map' style='background-color: black;'></div>
         <div id="menu-bar">
@@ -107,11 +121,6 @@
             <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
         </div>
     </div>
-
-<!--     <div id="homepage">Home Page<button onclick="document.getElementById('startpage').style.display = 'block'; document.getElementById('homepage').style.display = 'none';">Next Page</button>
-    </div>
-    <div id="startpage">Start Page<button onclick="document.getElementById('homepage').style.display = 'block'; document.getElementById('startpage').style.display = 'none';">Previous Page</button>
-    </div> -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">

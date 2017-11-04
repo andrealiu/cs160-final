@@ -216,15 +216,19 @@ span {
     color: black;
 }
 
+strong {
+    color: #41b3a3;
+}
+
 .popup {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.92);
     position: absolute;
-    height: 200px;
-    width: 60%;
-    top: 28%;
-    left: 20%;
+    height: 350px;
+    width: 70%;
+    top: 21%;
+    left: 13%;
     z-index: 999;
-    line-height: 200px;
+    border-radius: 10px;
     visibility: hidden;
     box-shadow: 5px 5px 5px #a7abaa;
     text-align: center;
@@ -236,10 +240,22 @@ span {
     opacity: 0;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    padding: 10px;
 }
 
 .show {
     visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    overflow: hidden; 
+}
+
+.hide {
+    visibility: hidden;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     animation-delay: 2s;
@@ -258,4 +274,44 @@ span {
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+#points {
+    background-color: rgba(255, 255, 255, 0.94);
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 48px;
+    font-family: Avenir;
+    font-size: 24px;
+    border: 2px solid #46524b;
+    /* border-color: black; */
+    color: #46524b;
+    position: absolute;
+    z-index: 99;
+    top: 16%;
+    left: 4%;
+}
+
+.popup-exit {
+    background-color: #41b3a3;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+div#points-label {
+    color: #303e36;
+    font-family: avenir;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 16px;
+    top: 12%;
+    position: absolute;
+    z-index: 100;
+    left: 2%;
 }
