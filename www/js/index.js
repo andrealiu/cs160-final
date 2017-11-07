@@ -200,6 +200,7 @@ var app = {
         document.getElementById('points').innerHTML = my_points
         var popup = document.getElementById("points-popup");
         popup.classList.remove("hide");
+        document.getElementById('my-leaderboard-score').innerHTML= my_points;
         document.getElementById('points-added').innerHTML = "+ ".concat(points, " points added")
         popup.classList.add("show-fast");
     },
@@ -259,6 +260,7 @@ var app = {
         document.getElementById('eventspage').style.display = 'none'; 
         document.getElementById('eventspage').style.display = 'none'; 
         document.body.style.backgroundImage = "none";
+        document.getElementById('my-leaderboard-score').innerHTML= my_points;
         // popup.classList.add("show");
     },
     showEventsPage: function() {
