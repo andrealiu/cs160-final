@@ -107,9 +107,17 @@
                 Get <strong>more points</strong> for attending events from a variety of perspectives. Move up the leaderboard + have the chance to receive discounts from local sponsors!
             </p>
             <p class="popup-text">
-                Tap on an event to go to the RSVP page. To cancel or confirm attendance, check the <strong>"My Events"</strong> tab.
+                Tap on an event to go to the RSVP page. To cancel/confirm attendance, either tap the event bubble again or check the <strong>"My Events"</strong> tab.
             </p>
             <div class="popup-exit" onclick="app.hidePopup('instructions')">OK</div>
+        </div>
+        <div id="points-popup" class="popup">
+            <p id="points-confirmed-text" class="popup-text">
+            Attendance confirmed!
+            </p>
+            <p class="popup-text" id="points-added">
+            </p>
+            <div class="popup-exit" onclick="app.hidePopup('points-popup')">OK</div>
         </div>
         <div id="points-label">My Points</div>
         <div id="points">0</div>
@@ -119,6 +127,226 @@
             <span id="map-tab" class="active" onclick="app.changeActiveTab('map-tab')">Find Events</span>
             <span id="events-tab" onclick="app.changeActiveTab('events-tab')">My Events</span>
             <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+        </div>
+    </div>
+    <div id="confirm-page-1">
+<!--         <div id="back-arrow">&lt;</div> -->
+        <div id="event-1" class="event-page">
+            <div class="bg-wrapper"><img id="bg-1" src="event1.png"></div>
+            <div class="confirm-title">Confirmation</div>
+            <div class="confirmation-text">
+                <img id="checkmark" src="check.png">
+                <p>
+                You have successfully RSVP'd to <strong>Free Speech in Social Media</strong>!
+                </p>
+            </div>
+            <p class="event-1-des">
+                <!-- picture -->
+                <strong id="event-details-title">Event Details</strong>
+                <br><br>
+                Panel on the impacts and implications of social media on free speech today.
+                <br><br>
+                <strong>Location:</strong> 160 Boalt Hall
+                <br><strong>Time:</strong> Wed 10/4, 7-8 PM
+                <br>
+                <strong>Point Value:</strong> + 2
+                <br><br>
+                <em>Fabiola, Kristine, and 3 other friends are also going!</em>
+            </p>
+            <p class="rsvp-instructions">
+                <strong><em> You'll receive a code at the event that you can later submit to redeem points. Submit under the "My Events" tab! </em></strong>
+            </p>
+            <p class="event-1-rsvp">
+                <div id='confirm-attendance' onclick='app.confirmEvent(1)'>OK</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(1)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+    </div>
+    <div id="confirm-page-2">
+        <div id="event-2" class="event-page">
+            <div class="bg-wrapper"><img id="bg-2" src="event2.jpg"></div>
+            <div class="confirm-title">Confirmation</div>
+            <div class="confirmation-text">
+                <img id="checkmark" src="check.png">
+                <p>
+                You have successfully RSVP'd to <strong>Reply All: Free Speech in the Age of Social Media</strong>!
+                </p>
+            </div>
+            <p class="event-2-des">
+                <!-- picture -->
+                <strong id="event-details-title">Event Details</strong>
+                <br><br>
+                A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.
+                <br><br>
+                <strong>Location:</strong> Doe Library
+                <br>
+                <strong>Time:</strong> Thu 10/5, 9:30 AM - 6:30 PM
+                <br>
+                <strong>Point Value:</strong> + 3
+                <br><br>
+                <em>Andrea and Fabiola are also going!</em>
+            </p>
+            <p class="rsvp-instructions">
+                <strong><em> You'll receive a code at the event that you can later submit to redeem points. Submit under the "My Events" tab!  </em></strong>
+            </p>
+            <p class="event-2-rsvp">
+                <div id='confirm-attendance' onclick='app.confirmEvent(2)'>OK</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(2)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+    </div>
+    <div id="confirm-page-3">
+        <div id="event-3" class="event-page">
+            <div class="bg-wrapper"><img id="bg-3" src="event3.png"></div>
+            <div class="confirm-title">Confirmation</div>
+            <div class="confirmation-text">
+                <img id="checkmark" src="check.png">
+                <p>
+                You have successfully RSVP'd to <strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong>!
+                </p>
+            </div>
+            <p class="event-3-des">
+                <!-- picture -->
+                <strong id="event-details-title">Event Details</strong>
+                <br><br>
+                In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.
+                <br><br>
+                <strong>Location:</strong> Li Ka Shing 256
+                <br>
+                <strong>Time:</strong> Tue 10/10, 6-8 PM
+                <br>
+                <strong>Point Value:</strong> + 6
+                <br><br>
+                <em>Jeffrey is also going!</em>
+            </p>
+            <p class="rsvp-instructions">
+                <strong><em> You'll receive a code at the event that you can later submit to redeem points. Submit under the "My Events" tab!  </em></strong>
+            </p>
+            <p class="event-3-rsvp">
+                <div id='confirm-attendance' onclick='app.confirmEvent(3)'>OK</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(3)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+    </div>
+    <div id="confirm-page-4">
+        <div id="event-4" class="event-page">
+            <div class="bg-wrapper"><img id="bg-4" src="event4.jpg"></div>
+            <div class="confirm-title">Confirmation</div>
+            <div class="confirmation-text">
+                <img id="checkmark" src="check.png">
+                <p>
+                You have successfully RSVP'd to <strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong>!
+                </p>
+            </div>
+            <p class="event-4-des">
+                <!-- picture -->
+                <strong id="event-details-title">Event Details</strong>
+                <br><br>
+                An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - 
+                <br>
+                <em>This event is meant to be an open dialogue, please respect all opinions presented.</em>
+                <br><br>
+                <strong>Location:</strong> RSF Fieldhouse
+                <br>
+                <strong>Time:</strong> Thu 10/12, 8-10 PM
+                <br>
+                <strong>Point Value:</strong> + 10
+            </p>
+            <p class="rsvp-instructions">
+                <strong><em> You'll receive a code at the event that you can later submit to redeem points. Submit under the "My Events" tab! </em></strong>
+            </p>
+            <p class="event-4-rsvp">
+                <div id='confirm-attendance' onclick='app.confirmEvent(4)'>OK</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(4)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+    </div>
+    <div id="attendance-pg1">
+        <div id="cancel-pg" onclick="app.exitPage()">X</div>
+        <div id="event-1" class="attendance-page">
+            <div class="bg-wrapper"><img id="bg-1" src="event1.png"></div>
+            <div class="attendance-title">Confirm Attendance</div>
+            <p class="event-1-des">
+                <!-- picture -->
+                <strong id="event-details-title">Free Speech in Social Media</strong>
+                <br><br>
+                To receive <strong>2</strong> points, please enter the attendance code distributed at the event.
+                <br><br>
+                <input type="text" name="fname"><br><br>
+            </p>
+            <p class="event-1-rsvp">
+                <div id='confirm-attendance' onclick='app.submitEvent(1, 2)'>Submit</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(1)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+        </div>
+    </div>
+    <div id="attendance-pg2">
+        <div id="cancel-pg" onclick="app.exitPage()">X</div>
+        <div id="event-2" class="attendance-page">
+            <div class="bg-wrapper"><img id="bg-2" src="event2.jpg"></div>
+            <div class="attendance-title">Confirm Attendance</div>
+            <p class="event-2-des">
+                <!-- picture -->
+                <strong id="event-details-title">Reply All: Free Speech in the Age of Social Media</strong>
+                <br><br>
+                To receive <strong>3</strong> points, please enter the attendance code distributed at the event.
+                <br><br>
+                <input type="text" name="fname"><br><br>
+            </p>
+            <p class="event-2-rsvp">
+                <div id='confirm-attendance' onclick='app.submitEvent(2, 3)'>Submit</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(2)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+        </div>
+    </div>
+    <div id="attendance-pg3">
+        <div id="cancel-pg" onclick="app.exitPage()">X</div>
+        <div id="event-1" class="attendance-page">
+            <div class="bg-wrapper"><img id="bg-3" src="event3.png"></div>
+            <div class="attendance-title">Confirm Attendance</div>
+            <p class="event-3-des">
+                <!-- picture -->
+                <strong id="event-details-title">Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong>
+                <br><br>
+                To receive <strong>6</strong> points, please enter the attendance code distributed at the event.
+                <br><br>
+                <input type="text" name="fname"><br><br>
+            </p>
+            <p class="event-3-rsvp">
+                <div id='confirm-attendance' onclick='app.submitEvent(3, 6)'>Submit</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(3)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
+        </div>
+    </div>
+    <div id="attendance-pg4">
+        <div id="cancel-pg" onclick="app.exitPage()">X</div>
+        <div id="event-4" class="attendance-page">
+            <div class="bg-wrapper"><img id="bg-1" src="event4.jpg"></div>
+            <div class="attendance-title">Confirm Attendance</div>
+            <p class="event-4-des">
+                <!-- picture -->
+                <strong id="event-details-title">Free Speech Week: A Dialogue on What Makes Trump a Great President</strong>
+                <br><br>
+                To receive <strong>10</strong> points, please enter the attendance code distributed at the event.
+                <br><br>
+                <input type="text" name="fname"><br><br>
+            </p>
+            <p class="event-4-rsvp">
+                <div id='confirm-attendance' onclick='app.submitEvent(4, 10)'>Submit</div>
+                <div id='cancel-attendance' onclick='app.cancelEvent(4)'>Cancel RSVP</div>
+            </p>
+            <div id='filler'></div>
+        </div>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
