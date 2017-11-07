@@ -125,8 +125,45 @@
         <div id='map' style='background-color: black;'></div>
         <div id="menu-bar">
             <span id="map-tab" class="active" onclick="app.changeActiveTab('map-tab')">Find Events</span>
-            <span id="events-tab" onclick="app.changeActiveTab('events-tab')">My Events</span>
-            <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
+            <span id="leaderboard" onclick="app.showLeaderboardPage()">Leaderboard</span>
+        </div>
+    </div>
+    <div id="leaderboardpage">
+        <div id="event-title">Leaderboard</div>
+        <div id="first-leader">
+            <span id="position">1. </span>
+            <span id="leader-name">Charles Lee </span>                   
+            <span id = "score">97</span>
+        </div>
+        <div id = "second-leader">
+            <span id="position">2. </span>
+            <span id="leader-name">Arnold Stary </span>   
+            <span id = "score">75</span>
+        </div>
+        <div id = "third-leader">
+            <span id="position">3. </span>
+            <span id="leader-name">Me </span>   
+            <span id = "score">48</span>
+        </div>
+        <div id = "fourth-leader">
+            <span id="position">4. </span>
+            <span id="leader-name">Jessica Breiers </span>   
+            <span id = "score">28</span>
+        </div>
+        <div id="menu-bar">
+            <span id="map-tab" onclick="app.showStartPage()">Find Events</span>
+            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
+            <span id="leaderboard" class="active" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+        </div>
+    </div>
+    <div id="eventspage">
+        <div id="event-title">My Events</div>
+        <div id='map' style='background-color: white;'></div>
+        <div id="menu-bar">
+            <span id="map-tab" onclick="app.showStartPage()">Find Events</span>
+            <span id="events-tab" class="active" onclick="app.changeActiveTab('events-tab')">My Events</span>
+            <span id="leaderboard" onclick="app.showLeaderboardPage()">Leaderboard</span>
         </div>
     </div>
     <div id="confirm-page-1">
