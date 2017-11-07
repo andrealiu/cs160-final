@@ -76,6 +76,16 @@ var app = {
         var popup = document.getElementById("confirm-attendance");
         popup.classList.add("show");
     },
+    goBackToMap: function() {
+        this.changeActiveTab("map-tab")
+        document.getElementById('startpage').style.display = 'block'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none'; 
+    },
     showStartPage: function() {
         this.changeActiveTab("map-tab")
         document.getElementById('startpage').style.display = 'block'; 
