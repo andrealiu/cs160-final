@@ -78,9 +78,14 @@ var app = {
         popup.classList.add("show");
     },
     showStartPage: function() {
+        this.changeActiveTab("map-tab")
         document.getElementById('startpage').style.display = 'block'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none'; 
         app.initializeMap()
         document.body.style.backgroundImage = "none";
         var popup = document.getElementById("instructions");
@@ -234,6 +239,30 @@ var app = {
         console.log("NUM", eventNum)
         console.log(rsvpd.filter(e => e != eventNum))
         console.log(rsvpd)
+    },
+    showLeaderboardPage: function() {
+        this.changeActiveTab("leaderboard")
+        document.getElementById('leaderboardpage').style.display = 'block'; 
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none'; 
+        document.body.style.backgroundImage = "none";
+        // popup.classList.add("show");
+    },
+    showEventsPage: function() {
+        this.changeActiveTab("events-tab")
+        document.getElementById('eventspage').style.display = 'block'; 
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.body.style.backgroundImage = "none";
+        // popup.classList.add("show");
     },
     initializeMap: function() {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhbGl1IiwiYSI6ImNqOWdudjNpdDJ6eXoyd3A5MmxxeTV1ZGMifQ.2P9d2RHzp_oDPb1IfasI4g';
@@ -462,15 +491,15 @@ var app = {
         //     map.flyTo({center: e.features[0].geometry.coordinates});
         // });
     },
-    changeActiveTab: function(id) {
-        document.getElementById(id).classList.add("active")
-        console.log("ACTIVE:", id);
+    changeActiveTab: function (id) {
         for (var i = 0; i < tabs.length; i++) {
             if (! (id==tabs[i])) {
                 console.log("LOOP:", tabs[i])
                 document.getElementById(tabs[i]).classList.remove("active")
             }
         }
+        document.getElementById(id).classList.add("active")
+        console.log("ACTIVE:", id);
 
     }
 };

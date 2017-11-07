@@ -125,8 +125,26 @@
         <div id='map' style='background-color: black;'></div>
         <div id="menu-bar">
             <span id="map-tab" class="active" onclick="app.changeActiveTab('map-tab')">Find Events</span>
-            <span id="events-tab" onclick="app.changeActiveTab('events-tab')">My Events</span>
-            <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
+            <span id="leaderboard" onclick="app.showLeaderboardPage()">Leaderboard</span>
+        </div>
+    </div>
+    <div id="leaderboardpage">
+        <div id="event-title">Leaderboard</div>
+        <div id='map' style='background-color: white;'></div>
+        <div id="menu-bar">
+            <span id="map-tab" onclick="app.showStartPage()">Find Events</span>
+            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
+            <span id="leaderboard" class="active" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+        </div>
+    </div>
+    <div id="eventspage">
+        <div id="event-title">Events</div>
+        <div id='map' style='background-color: white;'></div>
+        <div id="menu-bar">
+            <span id="map-tab" onclick="app.showStartPage()">Find Events</span>
+            <span id="events-tab" class="active" onclick="app.changeActiveTab('events-tab')">My Events</span>
+            <span id="leaderboard" onclick="app.showLeaderboardPage()">Leaderboard</span>
         </div>
     </div>
     <div id="confirm-page-1">
