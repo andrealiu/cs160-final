@@ -208,7 +208,7 @@ span {
 }
 
 .mapboxgl-popup {
-        max-width: 400px;
+        max-width: 300px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
@@ -314,4 +314,19 @@ div#points-label {
     position: absolute;
     z-index: 100;
     left: 2%;
+}
+
+#description {
+    text-align: center
+}
+
+#rsvp {
+    background-color: #41b3a3;
+    text-align: center;
+    width: 48px;
+    font-family: Dosis;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
 }

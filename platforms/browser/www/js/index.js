@@ -137,7 +137,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'>Description 1.</p>",
+                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div id='rsvp'>RSVP</div></p>",
                                     "icon":  "icon1"
                                 },
                                 "geometry": {
@@ -168,7 +168,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'>Description 2.</p>",
+                                    "description": "<p id='description'><strong>Reply All: Free Speech in the Age of Social Media</strong><br><br>A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.<br><br>Location: Doe Library<br>Time: Thu 10/5, 9:30 AM - 6:30 PM<div id='rsvp'>RSVP</div></p>",
                                     "icon":  "icon2"
                                 },
                                 "geometry": {
@@ -199,7 +199,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'>Description 3.</p>",
+                                    "description": "<p id='description'><strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong><br><br>In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.<br><br>Location: Li Ka Shing 256<br>Time: Tue 10/10, 6-8 PM<div id='rsvp'>RSVP</div></p>",
                                     "icon":  "icon3"
                                 },
                                 "geometry": {
@@ -230,7 +230,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'>Description 4.</p>",
+                                    "description": "<p id='description'><strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong><br><br>An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - <em>This event is meant to be an open dialogue, please respect all opinions presented.</em><br><br>Location: RSF Fieldhouse<br>Time: Thu 10/12, 8-10 PM<div id='rsvp'>RSVP</div></p>",
                                     "icon":  "icon4"
                                 },
                                 "geometry": {
