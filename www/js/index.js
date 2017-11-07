@@ -74,8 +74,47 @@ var app = {
         popup.classList.add("show");
     },
     showEventPage: function(eventNum) {
-        document.getElementById('startpage').style.display = 'none';
-        document.getElementById('confirm-page').style.display = 'block';
+        if (eventNum == 1) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('confirm-page-1').style.display = 'block';
+        }
+        else if (eventNum == 2) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('confirm-page-2').style.display = 'block';
+        }
+        else if (eventNum == 3) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('confirm-page-3').style.display = 'block';
+        }
+        else if (eventNum == 4) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('confirm-page-4').style.display = 'block';
+        }
+    },
+    confirmEvent: function(eventNum) {
+        if (eventNum == 1) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('confirm-page-1').style.display = 'none';
+        }
+        else if (eventNum == 2) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('confirm-page-2').style.display = 'none';
+        }
+        else if (eventNum == 3) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('confirm-page-3').style.display = 'none';
+        }
+        else if (eventNum == 4) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('confirm-page-4').style.display = 'none';
+        }
+    },
+    cancelEvent: function() {
+        document.getElementById('confirm-page-1').style.display = 'none';
+        document.getElementById('confirm-page-2').style.display = 'none';
+        document.getElementById('confirm-page-3').style.display = 'none';
+        document.getElementById('confirm-page-4').style.display = 'none';
+        document.getElementById('startpage').style.display = 'block';
     },
     initializeMap: function() {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhbGl1IiwiYSI6ImNqOWdudjNpdDJ6eXoyd3A5MmxxeTV1ZGMifQ.2P9d2RHzp_oDPb1IfasI4g';
@@ -181,7 +220,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Reply All: Free Speech in the Age of Social Media</strong><br><br>A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.<br><br>Location: Doe Library<br>Time: Thu 10/5, 9:30 AM - 6:30 PM<div id='rsvp'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Reply All: Free Speech in the Age of Social Media</strong><br><br>A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.<br><br>Location: Doe Library<br>Time: Thu 10/5, 9:30 AM - 6:30 PM<div id='rsvp' onclick='app.showEventPage(2)'>RSVP</div></p>",
                                     "icon":  "icon2"
                                 },
                                 "geometry": {
@@ -212,7 +251,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong><br><br>In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.<br><br>Location: Li Ka Shing 256<br>Time: Tue 10/10, 6-8 PM<div id='rsvp'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong><br><br>In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.<br><br>Location: Li Ka Shing 256<br>Time: Tue 10/10, 6-8 PM<div id='rsvp' onclick='app.showEventPage(3)'>RSVP</div></p>",
                                     "icon":  "icon3"
                                 },
                                 "geometry": {
@@ -243,7 +282,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong><br><br>An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - <em>This event is meant to be an open dialogue, please respect all opinions presented.</em><br><br>Location: RSF Fieldhouse<br>Time: Thu 10/12, 8-10 PM<div id='rsvp'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong><br><br>An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - <em>This event is meant to be an open dialogue, please respect all opinions presented.</em><br><br>Location: RSF Fieldhouse<br>Time: Thu 10/12, 8-10 PM<div id='rsvp' onclick='app.showEventPage(4)'>RSVP</div></p>",
                                     "icon":  "icon4"
                                 },
                                 "geometry": {

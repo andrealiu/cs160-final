@@ -320,6 +320,45 @@ div#points-label {
     left: 2%;
 }
 
+#confirm-page-1 {
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+    display: none;
+}
+#confirm-page-2 {
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+    display: none;
+}
+#confirm-page-3 {
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+    display: none;
+}
+#confirm-page-4 {
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+    display: none;
+}
+
+#confirm-attendance {
+    color: black;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+
+#cancel-attendance {
+    color: black;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+
 #description {
     text-align: center
 }
