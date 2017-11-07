@@ -239,13 +239,12 @@ strong {
     color: black;
     font-family: avenir;
     text-transform: none;
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
     opacity: 0;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     padding: 10px;
 }
+
 
 .show {
     visibility: visible;
@@ -253,6 +252,15 @@ strong {
     animation: fadeIn 1s;
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    overflow: hidden; 
+}
+
+.show-fast {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.7s;
+    animation: fadeIn 0.7s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     overflow: hidden; 
@@ -346,24 +354,139 @@ div#points-label {
 }
 
 #confirm-attendance {
-    color: black;
+    color: white;
     text-align: center;
     font-family: Dosis;
     font-size: 16px;
+    background-color: #41b3a3;
+    width: 120px;
+    height: 28px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    line-height: 28px;
+    border-radius: 15px;
 }
 
 #cancel-attendance {
-    color: black;
+    color: white;
     text-align: center;
     font-family: Dosis;
     font-size: 16px;
+    background-color: #cc5454;
+    width: 120px;
+    margin: 0 auto;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 15px;
 }
 
 #description {
     text-align: center
 }
 
-#rsvp {
+.event-page {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    margin-bottom: 60px;
+}
+
+.attendance-page {
+    position: absolute;
+    width: 100%;
+    top: 9%;
+    margin-bottom: 60px;
+}
+
+#checkmark {
+    width: 50px;
+    height: 60px;
+}
+
+img#bg-1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    height: 300px;
+    z-index: -2;
+    /* top: -35px; */
+    background-color: black;
+    opacity: 0.65;
+}
+
+img#bg-2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    height: 300px;
+    z-index: -2;
+     top: -50px; 
+    background-color: black;
+    opacity: 0.65;
+}
+
+img#bg-3 {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    height: 300px;
+    z-index: -2;
+     top: -50px; 
+    background-color: black;
+    opacity: 0.65;
+}
+
+img#bg-4 {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    height: 300px;
+    z-index: -2;
+     top: -50px; 
+    background-color: black;
+    opacity: 0.65;
+}
+
+.bg-wrapper {
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    z-index: -300;
+}
+
+.confirm-title {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 7%;
+    position: absolute;
+
+}
+
+.attendance-title {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 9%;
+    position: absolute;
+
+}
+
+div {
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+#rsvp-1 {
     background-color: #41b3a3;
     text-align: center;
     width: 48px;
@@ -372,4 +495,197 @@ div#points-label {
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 1px 1px 1px #309082;
+}
+
+#rsvp-2 {
+    background-color: #41b3a3;
+    text-align: center;
+    width: 48px;
+    font-family: Dosis;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
+}
+
+#rsvp-3 {
+    background-color: #41b3a3;
+    text-align: center;
+    width: 48px;
+    font-family: Dosis;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
+}
+
+#rsvp-4 {
+    background-color: #41b3a3;
+    text-align: center;
+    width: 48px;
+    font-family: Dosis;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
+}
+
+#confirm-button-1 {
+    background-color: #6db8e6;
+    text-align: center;
+    width: 120px;
+    font-family: Dosis;
+    font-size: 12px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
+    display:none;
+}
+
+#confirm-button-2 {
+    background-color: #6db8e6;
+    text-align: center;
+    width: 120px;
+    font-family: Dosis;
+    font-size: 12px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #309082;
+    display:none;
+}
+
+#confirm-button-3 {
+    background-color: #748683;
+    text-align: center;
+    width: 120px;
+    font-family: Dosis;
+    font-size: 12px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #6a6b6b;
+    display:none;
+}
+
+#confirm-button-4 {
+    background-color: #f59aa2;
+    text-align: center;
+    width: 120px;
+    font-family: Dosis;
+    font-size: 12px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #90305d;
+    display:none;
+}
+
+
+.left-points {
+    color: #6db8e6;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.center-points {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.right-points {
+    color: #e16b75;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+strong#event-details-title {
+    font-family: Dosis;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.confirmation-text {
+    padding-bottom: 8px;
+}
+
+.confirmation-text {
+    background-color: #f2f7f6;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+p.event-3-des {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+p.event-4-des {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+#filler {
+    height: 60px;
+}
+
+p.rsvp-instructions {
+    padding-bottom: 12px;
+}
+
+#attendance-pg1 {
+    display: none;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+#attendance-pg2 {
+    display: none;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+#attendance-pg3 {
+    display: none;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+#attendance-pg4 {
+    display: none;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 16px;
+}
+
+div#cancel-pg {
+    color: #41b3a3;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    font-size: 24px;
+}
+
+input[type="text"] {
+    height: 40px;
+    padding: 12px;
+    font-size: 24px;
+    text-align: center;
+}
+
+div#points-popup {
+    height: 150px;
+    width: 250px;
+    left: 13%;
+    top: 30%;
+    padding: 18px;
+}
+
+p#points-confirmed-text {
+    font-size: 24px;
 }

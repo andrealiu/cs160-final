@@ -23,6 +23,19 @@ var coordinates =[[-122.253281, 37.870222], [-122.259604, 37.872446], [-122.2647
 //     // document.getElementById('confirm-page').style.display = 'block';
 //     console.log("seijdoi");
 // };
+var pop1;
+var pop2;
+var pop3;
+var pop4;
+function remove(array, element) {
+    return array.filter(e => e !== element);
+    console.log("ARRAY", array)
+    console.log("ELEMENT", element)
+}
+var my_points = 0
+var map;
+
+var rsvpd = []
 var app = {
     // Application Constructor
     initialize: function() {
@@ -91,34 +104,140 @@ var app = {
             document.getElementById('confirm-page-4').style.display = 'block';
         }
     },
+    showAttendance: function(eventNum) {
+        if (eventNum == 1) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('attendance-pg1').style.display = 'block';
+        }
+        else if (eventNum == 2) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('attendance-pg2').style.display = 'block';
+        }
+        else if (eventNum == 3) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('attendance-pg3').style.display = 'block';
+        }
+        else if (eventNum == 4) {
+            document.getElementById('startpage').style.display = 'none';
+            document.getElementById('attendance-pg4').style.display = 'block';
+        }
+    },
     confirmEvent: function(eventNum) {
         if (eventNum == 1) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('confirm-page-1').style.display = 'none';
+            document.getElementById('rsvp-1').style.display = 'none';
+            document.getElementById('confirm-button-1').style.display = 'block';
+            rsvpd.push(1)
+            pop1.remove()
+
         }
         else if (eventNum == 2) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('confirm-page-2').style.display = 'none';
+            document.getElementById('rsvp-2').style.display = 'none';
+            document.getElementById('confirm-button-2').style.display = 'block';
+            rsvpd.push(2)
+            pop2.remove()
         }
         else if (eventNum == 3) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('confirm-page-3').style.display = 'none';
+            document.getElementById('rsvp-3').style.display = 'none';
+            document.getElementById('confirm-button-3').style.display = 'block';
+            rsvpd.push(3)
+            pop3.remove()
         }
         else if (eventNum == 4) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('confirm-page-4').style.display = 'none';
+            document.getElementById('rsvp-4').style.display = 'none';
+            document.getElementById('confirm-button-4').style.display = 'block';
+            rsvpd.push(4)
+            pop4.remove()
         }
     },
-    cancelEvent: function() {
+    submitEvent: function(eventNum, points) {
+        if (eventNum == 1) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('attendance-pg1').style.display = 'none';
+            pop1.remove()
+            map.removeLayer('points')
+        }
+        else if (eventNum == 2) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('attendance-pg2').style.display = 'none';
+            pop2.remove()
+            map.removeLayer('points2')
+        }
+        else if (eventNum == 3) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('attendance-pg3').style.display = 'none';
+            pop3.remove()
+            map.removeLayer('points3')
+        }
+        else if (eventNum == 4) {
+            document.getElementById('startpage').style.display = 'block';
+            document.getElementById('attendance-pg4').style.display = 'none';
+            pop4.remove()
+            map.removeLayer('points4')
+        }
+        my_points += points
+        document.getElementById('points').innerHTML = my_points
+        var popup = document.getElementById("points-popup");
+        popup.classList.remove("hide");
+        document.getElementById('points-added').innerHTML = "+ ".concat(points, " points added")
+        popup.classList.add("show-fast");
+    },
+    exitPage: function() {
+        document.getElementById('attendance-pg1').style.display = 'none';
+        document.getElementById('attendance-pg2').style.display = 'none';
+        document.getElementById('attendance-pg3').style.display = 'none';
+        document.getElementById('attendance-pg4').style.display = 'none';
+        document.getElementById('startpage').style.display = 'block';
+        pop1.remove()
+        pop2.remove()
+        pop3.remove()
+        pop4.remove()
+    },
+    cancelEvent: function(eventNum) {
         document.getElementById('confirm-page-1').style.display = 'none';
         document.getElementById('confirm-page-2').style.display = 'none';
         document.getElementById('confirm-page-3').style.display = 'none';
         document.getElementById('confirm-page-4').style.display = 'none';
+        document.getElementById('attendance-pg1').style.display = 'none';
+        document.getElementById('attendance-pg2').style.display = 'none';
+        document.getElementById('attendance-pg3').style.display = 'none';
+        document.getElementById('attendance-pg4').style.display = 'none';
         document.getElementById('startpage').style.display = 'block';
+        if (eventNum == 1) {
+            document.getElementById('rsvp-1').style.display = 'block';
+            document.getElementById('confirm-button-1').style.display = 'none';
+            pop1.remove()
+        }
+        else if (eventNum == 2) {
+            document.getElementById('rsvp-2').style.display = 'block';
+            document.getElementById('confirm-button-2').style.display = 'none';
+            pop2.remove()
+        }
+        else if (eventNum == 3) {
+            document.getElementById('rsvp-3').style.display = 'block';
+            document.getElementById('confirm-button-3').style.display = 'none';
+            pop3.remove()
+        }
+        else if (eventNum == 4) {
+            document.getElementById('rsvp-4').style.display = 'block';
+            document.getElementById('confirm-button-4').style.display = 'none';
+            pop4.remove()
+        }
+        rsvpd = rsvpd.filter(e => e != eventNum);
+        console.log("NUM", eventNum)
+        console.log(rsvpd.filter(e => e != eventNum))
+        console.log(rsvpd)
     },
     initializeMap: function() {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhbGl1IiwiYSI6ImNqOWdudjNpdDJ6eXoyd3A5MmxxeTV1ZGMifQ.2P9d2RHzp_oDPb1IfasI4g';
-        var map = new mapboxgl.Map({
+        map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v10',
             center: [-122.259065, 37.871811],
@@ -189,7 +308,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div id='rsvp' onclick='app.showEventPage(1)'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br><strong>Location:</strong> 160 Boalt Hall<br><strong>Time:</strong> Wed 10/4, 7-8 PM<br><br><em>Fabiola, Kristine, and 3 other friends are going!</em><div class='left-points'>+ 2 Points</div><div id='rsvp-1' onclick='app.showEventPage(1)'>RSVP</div><div id='confirm-button-1' onclick='app.showAttendance(1)'>Confirm Attendance</div></p>",
                                     "icon":  "icon1"
                                 },
                                 "geometry": {
@@ -220,7 +339,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Reply All: Free Speech in the Age of Social Media</strong><br><br>A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.<br><br>Location: Doe Library<br>Time: Thu 10/5, 9:30 AM - 6:30 PM<div id='rsvp' onclick='app.showEventPage(2)'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Reply All: Free Speech in the Age of Social Media</strong><br><br>A selection of panels and open discussions with faculty, students and staff addressing the history, practice, and spaces of free speech within the university.<br><br><strong>Location:</strong> Doe Library<br><strong>Time:</strong> Thu 10/5, 9:30 AM - 6:30 PM<br><br><em>Andrea and Fabiola are going!</em><div class='left-points'>+ 3 Points</div><div id='rsvp-2' onclick='app.showEventPage(2)'>RSVP</div><div id='confirm-button-2' onclick='app.showAttendance(2)'>Confirm Attendance</div></p>",
                                     "icon":  "icon2"
                                 },
                                 "geometry": {
@@ -251,7 +370,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong><br><br>In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.<br><br>Location: Li Ka Shing 256<br>Time: Tue 10/10, 6-8 PM<div id='rsvp' onclick='app.showEventPage(3)'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech on Campus: A Discussion with Dean Erwin Chemerinsky in Honor of Constitution Day</strong><br><br>In his new book, Free Speech on Campus, written with Howard Gillman, they argue that campuses must provide supportive learning environments for an increasingly diverse student body but at the same time must never restrict the expression of ideas.<br><br>Location: Li Ka Shing 256<br>Time: Tue 10/10, 6-8 PM<br><br><em>Jeffrey is going!</em><div class='center-points'>+ 6 Points</div><div id='rsvp-3' onclick='app.showEventPage(3)'>RSVP</div><div id='confirm-button-3' onclick='app.showAttendance(3)'>Confirm Attendance</div></p>",
                                     "icon":  "icon3"
                                 },
                                 "geometry": {
@@ -282,7 +401,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong><br><br>An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - <em>This event is meant to be an open dialogue, please respect all opinions presented.</em><br><br>Location: RSF Fieldhouse<br>Time: Thu 10/12, 8-10 PM<div id='rsvp' onclick='app.showEventPage(4)'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech Week: A Dialogue on What Makes Trump a Great President</strong><br><br>An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future.<br><br>Location: RSF Fieldhouse<br>Time: Thu 10/12, 8-10 PM<div class='right-points'>+ 10 Points</div><div id='rsvp-4' onclick='app.showEventPage(4)'>RSVP</div><div id='confirm-button-4' onclick='app.showAttendance(4)'>Confirm Attendance</div></p>",
                                     "icon":  "icon4"
                                 },
                                 "geometry": {
@@ -300,32 +419,48 @@ var app = {
             });
         });
         map.on('click', 'points', function (e) {
-            new mapboxgl.Popup()
+            pop1 = new mapboxgl.Popup()
                 .setLngLat(e.features[0].geometry.coordinates)
                 .setHTML(e.features[0].properties.description)
                 .addTo(map);
+            if (rsvpd.includes(1)) {
+                document.getElementById('rsvp-1').style.display = 'none';
+                document.getElementById('confirm-button-1').style.display = 'block';
+            }
         });
         map.on('click', 'points2', function (e) {
-            new mapboxgl.Popup()
+            pop2 = new mapboxgl.Popup()
                 .setLngLat(e.features[0].geometry.coordinates)
                 .setHTML(e.features[0].properties.description)
                 .addTo(map);
+            if (rsvpd.includes(2)) {
+                document.getElementById('rsvp-2').style.display = 'none';
+                document.getElementById('confirm-button-2').style.display = 'block';
+            }
         });
         map.on('click', 'points3', function (e) {
-            new mapboxgl.Popup()
+            pop3 = new mapboxgl.Popup()
                 .setLngLat(e.features[0].geometry.coordinates)
                 .setHTML(e.features[0].properties.description)
                 .addTo(map);
+            if (rsvpd.includes(3)) {
+                document.getElementById('rsvp-3').style.display = 'none';
+                document.getElementById('confirm-button-3').style.display = 'block';
+            }
         });
         map.on('click', 'points4', function (e) {
-            new mapboxgl.Popup()
+            pop4 = new mapboxgl.Popup()
                 .setLngLat(e.features[0].geometry.coordinates)
                 .setHTML(e.features[0].properties.description)
                 .addTo(map);
+            if (rsvpd.includes(4)) {
+                document.getElementById('rsvp-4').style.display = 'none';
+                document.getElementById('confirm-button-4').style.display = 'block';
+            }
         });
-        map.on('click', 'points1', function (e) {
-            map.flyTo({center: e.features[0].geometry.coordinates});
-        });
+        // map.on('click', 'points2', function (e) {
+        //     map.flyTo({center: e.features[0].geometry.coordinates});
+        // });
     },
     changeActiveTab: function(id) {
         document.getElementById(id).classList.add("active")
