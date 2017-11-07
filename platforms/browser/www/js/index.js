@@ -71,7 +71,6 @@ var app = {
        var popup = document.getElementById(id);
        popup.classList.remove("show");
        popup.classList.add("hide");
-
     },
     showPopup: function(id){
         var popup = document.getElementById("confirm-attendance");
