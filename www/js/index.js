@@ -18,6 +18,11 @@
  */
 var tabs = ["map-tab", "events-tab", "leaderboard"]
 var coordinates =[[-122.253281, 37.870222], [-122.259604, 37.872446], [-122.264737, 37.873422], [-122.262816, 37.868604]]
+// function showEventPage(name) {
+//     // document.getElementById('startpage').style.display = 'none';
+//     // document.getElementById('confirm-page').style.display = 'block';
+//     console.log("seijdoi");
+// };
 var app = {
     // Application Constructor
     initialize: function() {
@@ -67,6 +72,10 @@ var app = {
         document.body.style.backgroundImage = "none";
         var popup = document.getElementById("instructions");
         popup.classList.add("show");
+    },
+    showEventPage: function(eventNum) {
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('confirm-page').style.display = 'block';
     },
     initializeMap: function() {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhbGl1IiwiYSI6ImNqOWdudjNpdDJ6eXoyd3A5MmxxeTV1ZGMifQ.2P9d2RHzp_oDPb1IfasI4g';
@@ -141,7 +150,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div class='rsvp' onclick='app.showPopup('confirm-attendance')'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div id='rsvp' onclick='app.showEventPage(1)'>RSVP</div></p>",
                                     "icon":  "icon1"
                                 },
                                 "geometry": {

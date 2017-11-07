@@ -156,6 +156,10 @@ p {
     display: none;
 }
 
+#confirm-page {
+    display: none;
+}
+
 #map {
     width: 100%;
     height: 80%;
