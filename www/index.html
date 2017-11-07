@@ -120,6 +120,13 @@
             <span id="events-tab" onclick="app.changeActiveTab('events-tab')">My Events</span>
             <span id="leaderboard" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
         </div>
+        <div id="confirm-attendance" class="popup">
+            <p class="popup-text">
+                Please confirm attendance for <strong>event</strong>!
+            </p>
+            <div class="popup-exit" onclick="app.hidePopup('confirm-attendance')">YES</div>
+            <div class="popup-exit" onclick="app.hidePopup('confirm-attendance')">Cancel</div>
+        </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

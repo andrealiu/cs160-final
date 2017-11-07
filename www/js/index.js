@@ -55,6 +55,10 @@ var app = {
        popup.classList.add("hide");
 
     },
+    showPopup: function(id){
+        var popup = document.getElementById("confirm-attendance");
+        popup.classList.add("show");
+    },
     showStartPage: function() {
         document.getElementById('startpage').style.display = 'block'; 
         document.getElementById('homepage').style.display = 'none';
@@ -137,7 +141,7 @@ var app = {
                             "features": [{
                                 "type": "Feature",
                                 "properties": {
-                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div id='rsvp'>RSVP</div></p>",
+                                    "description": "<p id='description'><strong>Free Speech in Social Media</strong><br><br>Panel on the impacts and implications of social media on free speech today.<br><br>Location: 160 Boalt Hall<br>Time: Wed 10/4, 7-8 PM<div class='rsvp' onclick='app.showPopup('confirm-attendance')'>RSVP</div></p>",
                                     "icon":  "icon1"
                                 },
                                 "geometry": {
