@@ -230,7 +230,7 @@ span {
     text-align: center;
     position: absolute;
     font-size: 25px;
-    top: 20%;
+    top: 28%;
     width: 100%;
 }
 
@@ -238,7 +238,7 @@ span {
     color:  #bdccc6;
     position: absolute;
     font-size: 25px;
-    top: 30%;
+    top: 38%;
     width: 100%;
 }
 
@@ -246,16 +246,24 @@ span {
     color:  #bdccc6;
     position: absolute;
     font-size: 25px;
-    top: 40%;
+    top: 48%;
     width: 100%;
 }
 #fourth-leader {
     color:  #bdccc6;
     position: absolute;
     font-size: 25px;
-    top: 50%;
+    top: 58%;
     width: 100%;
     font-weight: bold;
+}
+
+img#trophy {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 36%;
+    top: 12%;
 }
 .active {
     background-color: #41b3a3;
