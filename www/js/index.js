@@ -177,24 +177,36 @@ var app = {
             document.getElementById('attendance-pg1').style.display = 'none';
             pop1.remove()
             map.removeLayer('points')
+            document.getElementById("points-added").classList.remove("center-text")
+            document.getElementById("points-added").classList.remove("right-text")
+            document.getElementById("points-added").classList.add("left-text")
         }
         else if (eventNum == 2) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg2').style.display = 'none';
             pop2.remove()
             map.removeLayer('points2')
+            document.getElementById("points-added").classList.remove("center-text")
+            document.getElementById("points-added").classList.remove("right-text")
+            document.getElementById("points-added").classList.add("left-text")
         }
         else if (eventNum == 3) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg3').style.display = 'none';
             pop3.remove()
             map.removeLayer('points3')
+            document.getElementById("points-added").classList.remove("left-text")
+            document.getElementById("points-added").classList.remove("right-text")
+            document.getElementById("points-added").classList.add("center-text")
         }
         else if (eventNum == 4) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg4').style.display = 'none';
             pop4.remove()
             map.removeLayer('points4')
+            document.getElementById("points-added").classList.remove("center-text")
+            document.getElementById("points-added").classList.remove("left-text")
+            document.getElementById("points-added").classList.add("right-text")
         }
         my_points += points
         document.getElementById('points').innerHTML = my_points
