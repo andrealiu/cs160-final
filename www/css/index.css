@@ -199,6 +199,15 @@ span {
     width: 100%;
 }
 
+#no-rsvps {
+    color:  #bdccc6;
+    text-align: center;
+    position: absolute;
+    font-size: 25px;
+    top: 28%;
+    width: 100%;
+}
+
 #event-1 {
     color:  #bdccc6;
     text-align: center;

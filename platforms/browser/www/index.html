@@ -73,7 +73,7 @@
     ">
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>BirdsEye</title>
 </head>
 
 <body>
@@ -158,49 +158,23 @@
             <span id="leaderboard" class="active" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
         </div>
     </div>
-    <div id="leaderboardpage">
-        <div id="event-title">Leaderboard</div>
-        <img id="trophy" src="trophy.png">
-        <div id="first-leader">
-            <span id="position">1. </span>
-            <span id="leader-name">Charles Lee </span>
-            <span class = "score">78</span>
-        </div>
-        <div id = "second-leader">
-            <span id="position">2. </span>
-            <span id="leader-name">Arnold Stary </span>
-            <span class = "score">51</span>
-        </div>
-        <div id = "third-leader">
-            <span id="position">3. </span>
-            <span id="leader-name">Jessica Breiers </span>
-            <span class = "score">30</span>
-        </div>
-        <div id = "fourth-leader">
-            <span id="position">4. </span>
-            <span id="leader-name">Me </span>
-            <span id="my-leaderboard-score" class = "score"></span>
-        </div>
-        <div id="menu-bar">
-            <span id="map-tab" onclick="app.goBackToMap()">Find Events</span>
-            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
-            <span id="leaderboard" class="active" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
-        </div>
-    </div>
     <div id="eventspage">
         <div id="event-title">My Events</div>
         <img id="trophy" src="img/logo.png">
+        <div id="no-rsvps">
+            <span id="leader-name">You have not RSVP'd to any events!</span>
+        </div>
         <div id="event-1">
-            <span id="leader-name" onclick="app.goBackToMap()">Social Media </span>
+            <span id="leader-name" onclick="app.showAttendance(1)">Social Media </span>
         </div>
         <div id = "event-2">
-            <span id="leader-name">Reply All </span>
+            <span id="leader-name" onclick="app.showAttendance(2)">Reply All </span>
         </div>
         <div id = "event-3">
-            <span id="leader-name">Free Speech </span>
+            <span id="leader-name" onclick="app.showAttendance(3)">Free Speech </span>
         </div>
         <div id = "event-4">
-            <span id="leader-name">Donald Trump Dialogue </span>
+            <span id="leader-name" onclick="app.showAttendance(4)">Donald Trump Dialogue </span>
         </div>
         <div id="menu-bar">
             <span id="map-tab" onclick="app.goBackToMap()">Find Events</span>

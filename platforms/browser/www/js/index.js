@@ -119,6 +119,12 @@ var app = {
         }
     },
     showAttendance: function(eventNum) {
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('no-rsvps').style.display = 'none';
+        document.getElementById('event-1').style.display = 'none';
+        document.getElementById('event-2').style.display = 'none';
+        document.getElementById('event-3').style.display = 'none';
+        document.getElementById('event-4').style.display = 'none';
         if (eventNum == 1) {
             document.getElementById('startpage').style.display = 'none';
             document.getElementById('attendance-pg1').style.display = 'block';
@@ -170,31 +176,36 @@ var app = {
             rsvpd.push(4)
             pop4.remove()
         }
+        this.changeActiveTab('map-tab')
     },
     submitEvent: function(eventNum, points) {
         if (eventNum == 1) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg1').style.display = 'none';
-            pop1.remove()
-            map.removeLayer('points')
+            pop1.remove();
+            map.removeLayer('points');
+            this.goBackToMap();
         }
         else if (eventNum == 2) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg2').style.display = 'none';
             pop2.remove()
             map.removeLayer('points2')
+            this.goBackToMap();
         }
         else if (eventNum == 3) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg3').style.display = 'none';
-            pop3.remove()
-            map.removeLayer('points3')
+            pop3.remove();
+            map.removeLayer('points3');
+            this.goBackToMap();
         }
         else if (eventNum == 4) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg4').style.display = 'none';
-            pop4.remove()
-            map.removeLayer('points4')
+            pop4.remove();
+            map.removeLayer('points4');
+            this.goBackToMap();
         }
         my_points += points
         document.getElementById('points').innerHTML = my_points
@@ -266,10 +277,14 @@ var app = {
     showEventsPage: function() {
         this.changeActiveTab("events-tab")
         document.getElementById('eventspage').style.display = 'block';
+        document.getElementById('no-rsvps').style.display = 'none';
         document.getElementById('event-1').style.display = 'none';
         document.getElementById('event-2').style.display = 'none';
         document.getElementById('event-3').style.display = 'none';
         document.getElementById('event-4').style.display = 'none';
+        if (rsvpd.length == 0) {
+          document.getElementById('no-rsvps').style.display = 'block';
+        }
         if (rsvpd.indexOf(1) > -1) {
           document.getElementById('event-1').style.display = 'block';
         }
