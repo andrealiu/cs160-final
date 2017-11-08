@@ -162,19 +162,19 @@
         <div id="event-title">My Events</div>
         <img id="trophy" src="img/logo.png">
         <div id="no-rsvps">
-            <span id="leader-name">You have not RSVP'd to any events!</span>
+            <div class="rsvp-message">It looks like you haven't RSVP'd to any events yet! Check the "Find Events" tab to look for things happening in your area.</div>
         </div>
         <div id="event-1">
-            <span id="leader-name" onclick="app.showAttendance(1)">Social Media </span>
+            <span id="my-event-name" onclick="app.showAttendance(1)">Social Media </span>
         </div>
         <div id = "event-2">
-            <span id="leader-name" onclick="app.showAttendance(2)">Reply All </span>
+            <span id="my-event-name" onclick="app.showAttendance(2)">Reply All </span>
         </div>
         <div id = "event-3">
-            <span id="leader-name" onclick="app.showAttendance(3)">Free Speech </span>
+            <span id="my-event-name" onclick="app.showAttendance(3)">Free Speech </span>
         </div>
         <div id = "event-4">
-            <span id="leader-name" onclick="app.showAttendance(4)">Donald Trump Dialogue </span>
+            <span id="my-event-name" onclick="app.showAttendance(4)">Donald Trump Dialogue </span>
         </div>
         <div id="menu-bar">
             <span id="map-tab" onclick="app.goBackToMap()">Find Events</span>
@@ -184,7 +184,7 @@
     </div>
     <div id="confirm-page-1">
 <!--         <div id="back-arrow">&lt;</div> -->
-        <div id="event-1" class="event-page">
+        <div id="event-1-confirm" class="event-page">
             <div class="bg-wrapper"><img id="bg-1" src="event1.png"></div>
             <div class="confirm-title">Confirmation</div>
             <div class="confirmation-text">
@@ -217,7 +217,7 @@
         </div>
     </div>
     <div id="confirm-page-2">
-        <div id="event-2" class="event-page">
+        <div id="event-2-confirm" class="event-page">
             <div class="bg-wrapper"><img id="bg-2" src="event2.jpg"></div>
             <div class="confirm-title">Confirmation</div>
             <div class="confirmation-text">
@@ -251,7 +251,7 @@
         </div>
     </div>
     <div id="confirm-page-3">
-        <div id="event-3" class="event-page">
+        <div id="event-3-confirm" class="event-page">
             <div class="bg-wrapper"><img id="bg-3" src="event3.png"></div>
             <div class="confirm-title">Confirmation</div>
             <div class="confirmation-text">
@@ -285,7 +285,7 @@
         </div>
     </div>
     <div id="confirm-page-4">
-        <div id="event-4" class="event-page">
+        <div id="event-4-confirm" class="event-page">
             <div class="bg-wrapper"><img id="bg-4" src="event4.jpg"></div>
             <div class="confirm-title">Confirmation</div>
             <div class="confirmation-text">
@@ -320,7 +320,7 @@
     </div>
     <div id="attendance-pg1">
         <div id="cancel-pg" onclick="app.exitPage()">X</div>
-        <div id="event-1" class="attendance-page">
+        <div id="event-1-confirm" class="attendance-page">
             <div class="bg-wrapper"><img id="bg-1" src="event1.png"></div>
             <div class="attendance-title">Confirm Attendance</div>
             <p class="event-1-des">
@@ -341,7 +341,7 @@
     </div>
     <div id="attendance-pg2">
         <div id="cancel-pg" onclick="app.exitPage()">X</div>
-        <div id="event-2" class="attendance-page">
+        <div id="event-2-confirm" class="attendance-page">
             <div class="bg-wrapper"><img id="bg-2" src="event2.jpg"></div>
             <div class="attendance-title">Confirm Attendance</div>
             <p class="event-2-des">
@@ -362,7 +362,7 @@
     </div>
     <div id="attendance-pg3">
         <div id="cancel-pg" onclick="app.exitPage()">X</div>
-        <div id="event-1" class="attendance-page">
+        <div id="event-3-confirm" class="attendance-page">
             <div class="bg-wrapper"><img id="bg-3" src="event3.png"></div>
             <div class="attendance-title">Confirm Attendance</div>
             <p class="event-3-des">
@@ -383,7 +383,7 @@
     </div>
     <div id="attendance-pg4">
         <div id="cancel-pg" onclick="app.exitPage()">X</div>
-        <div id="event-4" class="attendance-page">
+        <div id="event-4-confirm" class="attendance-page">
             <div class="bg-wrapper"><img id="bg-1" src="event4.jpg"></div>
             <div class="attendance-title">Confirm Attendance</div>
             <p class="event-4-des">

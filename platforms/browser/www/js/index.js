@@ -220,6 +220,7 @@ var app = {
             document.getElementById("points-added").classList.add("right-text")
         }
         my_points += points
+        rsvpd = rsvpd.filter(e => e != eventNum);
         document.getElementById('points').innerHTML = my_points
         var popup = document.getElementById("points-popup");
         popup.classList.remove("hide");
