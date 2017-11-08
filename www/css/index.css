@@ -69,7 +69,7 @@ body {
     width:225px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 60px -112px; 
+    margin:-115px 0px 60px -112px;
 }
 
 /* Landscape layout (with min-width) */
@@ -139,14 +139,14 @@ p {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
 
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
@@ -199,6 +199,47 @@ span {
     width: 100%;
 }
 
+#no-rsvps {
+    color:  #bdccc6;
+    text-align: center;
+    position: absolute;
+    font-size: 25px;
+    top: 28%;
+    width: 100%;
+}
+
+#event-1 {
+    color:  #bdccc6;
+    text-align: center;
+    position: absolute;
+    font-size: 25px;
+    top: 28%;
+    width: 100%;
+}
+
+#event-2 {
+    color:  #bdccc6;
+    position: absolute;
+    font-size: 25px;
+    top: 38%;
+    width: 100%;
+}
+
+#event-3 {
+    color:  #bdccc6;
+    position: absolute;
+    font-size: 25px;
+    top: 48%;
+    width: 100%;
+}
+#event-4 {
+    color:  #bdccc6;
+    position: absolute;
+    font-size: 25px;
+    top: 58%;
+    width: 100%;
+}
+
 #position {
     color: #569990;
     text-align: center;
@@ -206,7 +247,7 @@ span {
     font-size: 30px;
     right: 35%;
     width: 100%;
-} 
+}
 
 #leaderboard-background {
     background-color: #bdcacc;
@@ -216,14 +257,14 @@ span {
     position: absolute;
     left: 30%;
     width: 100%;
-} 
+}
 #leader-name {
     color:  #82b39f;
     text-align: center;
     position: absolute;
     right: 2%;
     width: 100%;
-} 
+}
 
 #first-leader {
     color:  #bdccc6;
@@ -327,7 +368,7 @@ strong {
     -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .show-fast {
@@ -336,7 +377,7 @@ strong {
     animation: fadeIn 0.7s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .hide {
@@ -347,12 +388,12 @@ strong {
     -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
+    from {opacity: 0;}
     to {opacity: 1;}
 }
 
@@ -495,7 +536,7 @@ img#bg-2 {
     left: 0;
     height: 300px;
     z-index: -2;
-     top: -50px; 
+     top: -50px;
     background-color: black;
     opacity: 0.65;
 }
@@ -507,7 +548,7 @@ img#bg-3 {
     left: 0;
     height: 300px;
     z-index: -2;
-     top: -50px; 
+     top: -50px;
     background-color: black;
     opacity: 0.65;
 }
@@ -519,7 +560,7 @@ img#bg-4 {
     left: 0;
     height: 300px;
     z-index: -2;
-     top: -50px; 
+     top: -50px;
     background-color: black;
     opacity: 0.65;
 }

@@ -78,23 +78,23 @@ var app = {
     },
     goBackToMap: function() {
         this.changeActiveTab("map-tab")
-        document.getElementById('startpage').style.display = 'block'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'block';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
     },
     showStartPage: function() {
         this.changeActiveTab("map-tab")
-        document.getElementById('startpage').style.display = 'block'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'block';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
         app.initializeMap()
         document.body.style.backgroundImage = "none";
         var popup = document.getElementById("instructions");
@@ -119,6 +119,12 @@ var app = {
         }
     },
     showAttendance: function(eventNum) {
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('no-rsvps').style.display = 'none';
+        document.getElementById('event-1').style.display = 'none';
+        document.getElementById('event-2').style.display = 'none';
+        document.getElementById('event-3').style.display = 'none';
+        document.getElementById('event-4').style.display = 'none';
         if (eventNum == 1) {
             document.getElementById('startpage').style.display = 'none';
             document.getElementById('attendance-pg1').style.display = 'block';
@@ -170,11 +176,13 @@ var app = {
             rsvpd.push(4)
             pop4.remove()
         }
+        this.changeActiveTab('map-tab')
     },
     submitEvent: function(eventNum, points) {
         if (eventNum == 1) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg1').style.display = 'none';
+            this.goBackToMap();
             pop1.remove()
             map.removeLayer('points')
             document.getElementById("points-added").classList.remove("center-text")
@@ -186,6 +194,7 @@ var app = {
             document.getElementById('attendance-pg2').style.display = 'none';
             pop2.remove()
             map.removeLayer('points2')
+            this.goBackToMap();
             document.getElementById("points-added").classList.remove("center-text")
             document.getElementById("points-added").classList.remove("right-text")
             document.getElementById("points-added").classList.add("left-text")
@@ -193,6 +202,7 @@ var app = {
         else if (eventNum == 3) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg3').style.display = 'none';
+            this.goBackToMap();
             pop3.remove()
             map.removeLayer('points3')
             document.getElementById("points-added").classList.remove("left-text")
@@ -202,6 +212,7 @@ var app = {
         else if (eventNum == 4) {
             document.getElementById('startpage').style.display = 'block';
             document.getElementById('attendance-pg4').style.display = 'none';
+            this.goBackToMap();
             pop4.remove()
             map.removeLayer('points4')
             document.getElementById("points-added").classList.remove("center-text")
@@ -264,26 +275,46 @@ var app = {
     },
     showLeaderboardPage: function() {
         this.changeActiveTab("leaderboard")
-        document.getElementById('leaderboardpage').style.display = 'block'; 
+        document.getElementById('leaderboardpage').style.display = 'block';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
         document.body.style.backgroundImage = "none";
         document.getElementById('my-leaderboard-score').innerHTML= my_points;
         // popup.classList.add("show");
     },
     showEventsPage: function() {
         this.changeActiveTab("events-tab")
-        document.getElementById('eventspage').style.display = 'block'; 
+        document.getElementById('eventspage').style.display = 'block';
+        document.getElementById('no-rsvps').style.display = 'none';
+        document.getElementById('event-1').style.display = 'none';
+        document.getElementById('event-2').style.display = 'none';
+        document.getElementById('event-3').style.display = 'none';
+        document.getElementById('event-4').style.display = 'none';
+        if (rsvpd.length == 0) {
+          document.getElementById('no-rsvps').style.display = 'block';
+        }
+        if (rsvpd.indexOf(1) > -1) {
+          document.getElementById('event-1').style.display = 'block';
+        }
+        if (rsvpd.indexOf(2) > -1) {
+          document.getElementById('event-2').style.display = 'block';
+        }
+        if (rsvpd.indexOf(3) > -1) {
+          document.getElementById('event-3').style.display = 'block';
+        }
+        if (rsvpd.indexOf(4) > -1) {
+          document.getElementById('event-4').style.display = 'block';
+        }
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.body.style.backgroundImage = "none";
         // popup.classList.add("show");
     },
