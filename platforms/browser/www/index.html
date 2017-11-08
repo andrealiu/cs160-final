@@ -35,10 +35,10 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
 <!--     <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' http://fonts.googleapis.com http://*.mapbox.com; font-src 'self' https://fonts.gstatic.com; child-src 'self' blob: ; img-src 'self' data: blob: ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://*.tiles.mapbox.com https://api.mapbox.com"> -->
 <!--     <meta http-equiv="Content-Security-Policy" content="
-    default-src * gap: https://ssl.gstatic.com; 
-    style-src * 'unsafe-inline'; 
-    script-src * 'unsafe-inline' 'unsafe-eval' blob:; 
-    media-src *; img-src * data: blob:; 
+    default-src * gap: https://ssl.gstatic.com;
+    style-src * 'unsafe-inline';
+    script-src * 'unsafe-inline' 'unsafe-eval' blob:;
+    media-src *; img-src * data: blob:;
     connect-src * https://*.tiles.mapbox.com https://api.mapbox.com;
     " />
  -->
@@ -51,11 +51,11 @@
     * Create your own at http://cspisawesome.com
     -->
 <!--     <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; 
-    style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; 
+    default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com;
+    style-src 'self' 'unsafe-inline' http://fonts.googleapis.com;
     media-src *;
     font-src 'self' https://fonts.gstatic.com;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:;" 
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:;"
     /> -->
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self' data: gap:
@@ -134,22 +134,51 @@
         <img id="trophy" src="trophy.png">
         <div id="first-leader">
             <span id="position">1. </span>
-            <span id="leader-name">Charles Lee </span>                   
+            <span id="leader-name">Charles Lee </span>
             <span class = "score">78</span>
         </div>
         <div id = "second-leader">
             <span id="position">2. </span>
-            <span id="leader-name">Arnold Stary </span>   
+            <span id="leader-name">Arnold Stary </span>
             <span class = "score">51</span>
         </div>
         <div id = "third-leader">
             <span id="position">3. </span>
-            <span id="leader-name">Jessica Breiers </span>   
+            <span id="leader-name">Jessica Breiers </span>
             <span class = "score">30</span>
         </div>
         <div id = "fourth-leader">
             <span id="position">4. </span>
-            <span id="leader-name">Me </span>   
+            <span id="leader-name">Me </span>
+            <span id="my-leaderboard-score" class = "score"></span>
+        </div>
+        <div id="menu-bar">
+            <span id="map-tab" onclick="app.goBackToMap()">Find Events</span>
+            <span id="events-tab" onclick="app.showEventsPage()">My Events</span>
+            <span id="leaderboard" class="active" onclick="app.changeActiveTab('leaderboard')">Leaderboard</span>
+        </div>
+    </div>
+    <div id="leaderboardpage">
+        <div id="event-title">Leaderboard</div>
+        <img id="trophy" src="trophy.png">
+        <div id="first-leader">
+            <span id="position">1. </span>
+            <span id="leader-name">Charles Lee </span>
+            <span class = "score">78</span>
+        </div>
+        <div id = "second-leader">
+            <span id="position">2. </span>
+            <span id="leader-name">Arnold Stary </span>
+            <span class = "score">51</span>
+        </div>
+        <div id = "third-leader">
+            <span id="position">3. </span>
+            <span id="leader-name">Jessica Breiers </span>
+            <span class = "score">30</span>
+        </div>
+        <div id = "fourth-leader">
+            <span id="position">4. </span>
+            <span id="leader-name">Me </span>
             <span id="my-leaderboard-score" class = "score"></span>
         </div>
         <div id="menu-bar">
@@ -160,7 +189,19 @@
     </div>
     <div id="eventspage">
         <div id="event-title">My Events</div>
-        <div id='map' style='background-color: white;'></div>
+        <img id="trophy" src="img/logo.png">
+        <div id="event-1">
+            <span id="leader-name" onclick="app.goBackToMap()">Social Media </span>
+        </div>
+        <div id = "event-2">
+            <span id="leader-name">Reply All </span>
+        </div>
+        <div id = "event-3">
+            <span id="leader-name">Free Speech </span>
+        </div>
+        <div id = "event-4">
+            <span id="leader-name">Donald Trump Dialogue </span>
+        </div>
         <div id="menu-bar">
             <span id="map-tab" onclick="app.goBackToMap()">Find Events</span>
             <span id="events-tab" class="active" onclick="app.changeActiveTab('events-tab')">My Events</span>
@@ -283,7 +324,7 @@
                 <!-- picture -->
                 <strong id="event-details-title">Event Details</strong>
                 <br><br>
-                An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future - 
+                An open discussion on how Trump has improved our country in the past two years, and what he has in store for America’s future -
                 <br>
                 <em>This event is meant to be an open dialogue, please respect all opinions presented.</em>
                 <br><br>

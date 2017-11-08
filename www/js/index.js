@@ -78,23 +78,23 @@ var app = {
     },
     goBackToMap: function() {
         this.changeActiveTab("map-tab")
-        document.getElementById('startpage').style.display = 'block'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'block';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
     },
     showStartPage: function() {
         this.changeActiveTab("map-tab")
-        document.getElementById('startpage').style.display = 'block'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'block';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
         app.initializeMap()
         document.body.style.backgroundImage = "none";
         var popup = document.getElementById("instructions");
@@ -252,26 +252,42 @@ var app = {
     },
     showLeaderboardPage: function() {
         this.changeActiveTab("leaderboard")
-        document.getElementById('leaderboardpage').style.display = 'block'; 
+        document.getElementById('leaderboardpage').style.display = 'block';
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
-        document.getElementById('eventspage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
+        document.getElementById('eventspage').style.display = 'none';
         document.body.style.backgroundImage = "none";
         document.getElementById('my-leaderboard-score').innerHTML= my_points;
         // popup.classList.add("show");
     },
     showEventsPage: function() {
         this.changeActiveTab("events-tab")
-        document.getElementById('eventspage').style.display = 'block'; 
+        document.getElementById('eventspage').style.display = 'block';
+        document.getElementById('event-1').style.display = 'none';
+        document.getElementById('event-2').style.display = 'none';
+        document.getElementById('event-3').style.display = 'none';
+        document.getElementById('event-4').style.display = 'none';
+        if (rsvpd.indexOf(1) > -1) {
+          document.getElementById('event-1').style.display = 'block';
+        }
+        if (rsvpd.indexOf(2) > -1) {
+          document.getElementById('event-2').style.display = 'block';
+        }
+        if (rsvpd.indexOf(3) > -1) {
+          document.getElementById('event-3').style.display = 'block';
+        }
+        if (rsvpd.indexOf(4) > -1) {
+          document.getElementById('event-4').style.display = 'block';
+        }
         document.getElementById('homepage').style.display = 'none';
         document.getElementById('homepage').style.display = 'none';
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('startpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
-        document.getElementById('leaderboardpage').style.display = 'none'; 
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('startpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
+        document.getElementById('leaderboardpage').style.display = 'none';
         document.body.style.backgroundImage = "none";
         // popup.classList.add("show");
     },
